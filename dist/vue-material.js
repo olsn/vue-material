@@ -10029,7 +10029,8 @@ exports.default = {
         return 'md-file-' + (0, _MdUuid2.default)();
       }
     },
-    name: String
+    name: String,
+    fileName: String
   },
   computed: {
     iconClass: function iconClass() {

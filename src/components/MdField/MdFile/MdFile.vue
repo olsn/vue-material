@@ -29,7 +29,8 @@
         type: String,
         default: () => 'md-file-' + MdUuid()
       },
-      name: String
+      name: String,
+      fileName: String
     },
     computed: {
       iconClass () {
