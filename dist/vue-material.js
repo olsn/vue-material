@@ -3521,8 +3521,8 @@ exports.default = new _MdComponent2.default({
   },
   watch: {
     mdActive: function mdActive(active) {
-      var isBoolean = typeof active === 'boolean';
-      var isEvent = active.constructor.toString().match(/function (\w*)/)[1].toLowerCase() === 'mouseevent';
+      var isBoolean = typeof active === 'boolean' || typeof active === "object";
+      var isEvent = active.constructor.toString().match(/(function|object) (\w*)/)[2].toLowerCase() === 'mouseevent';
 
       if (isBoolean && this.mdCentered && active) {
         this.startRipple({
