@@ -5,7 +5,7 @@
     <input
       class="md-input"
       readonly
-      v-model="model"
+      v-model="fileName"
       v-bind="{ disabled, required, placeholder }"
       @click="openPicker"
       @blur="onBlur">
@@ -73,7 +73,7 @@
       onFileSelected ({ target, dataTransfer }) {
         const files = target.files || dataTransfer.files
 
-        this.model = this.getFileName(files, target)
+        this.fileName = this.getFileName(files, target)
         this.$emit('md-change', files || target.value)
       }
     },
